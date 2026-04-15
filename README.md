@@ -1,16 +1,75 @@
-# React + Vite
+# SkyCast - Weather Dashboard ☁️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, responsive weather application built with **React.js** and **Material UI**. This app fetches real-time weather data from the **OpenWeatherMap API**, allowing users to search for any city and get instant weather updates with a modern interface.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Real-time Search:** Get current weather data by entering any city name.
+- **Dynamic UI:** Displayed data includes Temperature, Humidity, "Feels Like" info, and weather descriptions (e.g., Haze, Clouds, Rain).
+- **Responsive Design:** Built using Material UI components for a seamless experience across mobile, tablet, and desktop.
+- **Visual Feedback:** Interactive search bar and clean info cards for data presentation.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React.js (Vite)
+- **UI Library:** Material UI (MUI)
+- **API:** OpenWeatherMap API
+- **Icons:** Material UI Icons
+- **HTTP Client:** Fetch API / Axios
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+- Node.js installed on your machine.
+- An API Key from [OpenWeatherMap](https://openweathermap.org/api).
+
+### Installation
+
+1. **Clone the repo:**
+   ```bash
+   git clone [https://github.com/your-username/mini-project-react.git](https://github.com/your-username/mini-project-react.git)
+   cd mini-project-react
+Install dependencies:
+
+Bash
+npm install
+Set up your API Key:
+
+Create a .env file in the root directory.
+
+Add your key: VITE_WEATHER_API_KEY=your_api_key_here
+
+Run the development server:
+
+Bash
+npm run dev
+Open the app:
+Navigate to the local URL provided in your terminal (usually http://localhost:5173).
+
+📂 Project Structure
+src/components: Contains reusable UI components like SearchBox and InfoBox.
+
+src/App.jsx: Main logic container for managing weather state.
+
+public/: Static assets and icons.
+
+vite.config.js: Configuration for the Vite build tool.
+
+✍️ Author
+Manish Patra
+
+Developed with ❤️ using React & MUI.
+
+
+---
+
+### A few quick tips for this specific project:
+
+1.  **Vite Environment Variables:** Since you're using Vite (seen in your file structure), remember that any variable in your `.env` file **must** start with `VITE_` (e.g., `VITE_API_KEY`) otherwise Vite won't "see" it in your React code.
+2.  **API Security:** Definitely make sure your `.gitignore` includes `.env` so you don't accidentally leak your OpenWeather API key to GitHub!
+3.  **Deployment:** Since this is a Vite project, it's incredibly easy to deploy on **Vercel** or **Netlify**. You just connect your GitHub repo and it handles the rest.
+
+Are you planning to add any visual extras, like changing the background image based on whether it's raining or sunny in the searched city?
